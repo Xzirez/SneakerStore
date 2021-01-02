@@ -2,21 +2,18 @@
     {
      "id": "price_1I4qDcEF0eCscNOnAHHQWQKs",   
      "title": "Jordan 1 Shattered Backboard",
-     "description": "lorem ipsum",
      "image": "/images/BackBoard.jpg",
-     "price": 3000.00    
+     "price": 5000.00    
     },
     {
         "id": "price_1I4qXSEF0eCscNOnQ2WWpV9A",
         "title": "Jordan 4 OFF-WHITE SAIL",
-        "description": "lorem ipsum",
         "image": "/images/OffWhiteAir.jpg",
-        "price": 3000.00    
+        "price": 9000.00    
     },
     {
         "id": "price_1I4qYyEF0eCscNOn6yqyJzjl",
         "title": "Jordan 1 Zoom White",
-        "description": "lorem ipsum",
         "image": "/images/ZoomWhite.jpg",
         "price": 3000.00    
        }
