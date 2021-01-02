@@ -1,9 +1,15 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
-import products from '../products.json';
+import Link from 'next/link'
+import { useCart } from '../hooks/use-cart.js';
+
+import products from '../products';
 
 export default function Home() {
+
+  const { addToCart } = useCart();
+
   return (
     <div className={styles.container}>
       <Head>
@@ -12,26 +18,26 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
         <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
+        #1 Destination for Sneaker
         </p>
 
         <ul className={styles.grid}>
-          {products.map(product =>{
-            const { title, image, price, description, id} = product;
+          {products.map(product => {
+            const { id, title, image, description, price } = product;
             return (
               <li key={id} className={styles.card}>
-                <a href="#">
-                  <img src={image} alt={title}/>
-                  <h3>{title}</h3>
-                  <p>${price}</p>
-                  <p>{description}</p>
+               <Link href={`/products/${id}`}>
+               <a>
+                  <img src={image} alt={title} />
+                  <h3>{ title }</h3>
+                  <p>${ price }</p>
+                  <p>{ description }</p>
+                  <p>
+                    <button className={styles.button} onClick={() => addToCart({ id })}>Buy</button>
+                  </p>
                 </a>
+                </Link>
               </li>
             )
           })}
