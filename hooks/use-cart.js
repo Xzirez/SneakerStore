@@ -71,14 +71,6 @@ export function useCartState() {
     })
   }
 
-  /**
-   * @lesson-15-solution Exercise 3
-   * We can create a new function that when triggered
-   * with an ID and quantity, finds that product in
-   * our active cart state, and updates the quantity.
-   * We can finally pass that function in the return
-   * statement to make it available globally.
-   */
 
   function updateItem({ id, quantity }) {
     updateCart((prev) => {

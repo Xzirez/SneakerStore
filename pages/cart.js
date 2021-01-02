@@ -37,24 +37,11 @@ const columns = [
   
       const Quantity = () => {
   
-        /**
-         * @lesson-15-solution Exercise 2
-         * With our form, we can attach an onSubmit event
-         * listener, and when someone submits that form,
-         * we can use the event that's passed as an argument
-         * to prevent the default behavior of the form.
-         */
   
         function handleOnSubmit(e) {
           e.preventDefault();
   
-          /**
-           * @lesson-15-solution Exercise 4
-           * We can extra the input elements from our form,
-           * find the quantity input by its name, and use
-           * its value to call the updateItem function that
-           * we created and made available in our global state.
-           */
+
   
           const { currentTarget } = e;
           const inputs = Array.from(currentTarget.elements);
@@ -66,12 +53,6 @@ const columns = [
           });
         }
   
-        /**
-         * @lesson-15-solution Exercise 1
-         * We can use a number type input element as well
-         * as a button element that lets us give our customers
-         * a way to change the quantity.
-         */
   
         return (
           <form className={styles.cartQuantity} onSubmit={handleOnSubmit}>
